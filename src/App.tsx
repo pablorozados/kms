@@ -16,6 +16,15 @@ const App = () => {
         <div className="app-container">
             <h1>Qual a distância que o seu carro já percorreu?</h1>
             <MileageForm onSubmit={handleMileageSubmit} />
+
+            {/* Referências */}
+            <div style={{ textAlign: 'center', margin: '16px 0', color: '#555', fontSize: '1rem' }}>
+                <p>
+                    <strong>1 volta completa na Terra:</strong> 40.075 km<br />
+                    <strong>Distância da Terra até a Lua:</strong> 384.400 km
+                </p>
+            </div>
+
             {mileage > 0 && (
                 <div style={{ margin: '20px 0', textAlign: 'center' }}>
                     <p><strong>Quilometragem total:</strong> {mileage.toLocaleString()} km</p>
