@@ -1,0 +1,41 @@
+.globe-visualization {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 24px;
+    margin: 24px auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+.earth-image, .moon-image {
+    width: 80px;
+    height: 80px;
+}
+
+.earth, .moon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 16px;
+}
+
+.progress-bar-container {
+    width: 80%;
+    height: 16px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    margin: 24px auto;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #2196f3);
+    border-radius: 8px;
+    transition: width 0.5s;
+}
+
+.info {
+    margin-top: 16px;
+    font-size: 1.1em;
+}
