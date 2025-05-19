@@ -13,8 +13,11 @@ const GlobeVisualization: React.FC<GlobeVisualizationProps> = ({ mileage }) => {
     const partialLap = laps - fullLaps;
 
     const radius = 60;
-    const center = 100;
     const circleGap = 14;
+    const maxCircle = fullLaps + (partialLap > 0 ? 1 : 0);
+    const padding = 20;
+    const svgRadius = radius + maxCircle * circleGap + padding;
+    const center = svgRadius;
 
     // Círculos completos
     const circles = [];

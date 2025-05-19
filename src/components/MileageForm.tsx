@@ -1,34 +1,34 @@
 import React, { useState } from "react";
 
-type MileageFormProps = {
+interface MileageFormProps {
   onSubmit: (mileage: number) => void;
-};
+}
 
 const MileageForm: React.FC<MileageFormProps> = ({ onSubmit }) => {
-  const [mileage, setMileage] = useState<string>("");
+  const [value, setValue] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const value = parseFloat(mileage.replace(",", "."));
-    if (!isNaN(value) && value >= 0) {
-      onSubmit(value);
-      setMileage("");
+    const num = Number(value.replace(",", "."));
+    if (!isNaN(num) && num >= 0) {
+      onSubmit(num);
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Digite a quilometragem do seu carro:
-        <input
-          type="number"
-          value={mileage}
-          onChange={(e) => setMileage(e.target.value)}
-          placeholder="Ex: 50000"
-          min="0"
-          required
-        />
+      <label htmlFor="mileage-input">
+        Quantos quilômetros seu carro tem atualmente:
       </label>
+      <input
+        id="mileage-input"
+        type="number"
+        min="0"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Ex: 123456"
+        required
+      />
       <button type="submit">Calcular</button>
     </form>
   );
