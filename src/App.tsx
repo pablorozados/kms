@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import MileageForm from './components/MileageForm';
 import Infographic from './components/Infographic';
 import GlobeVisualization from './components/GlobeVisualization';
+import MoonDistanceVisualization from './components/MoonDistanceVisualization';
 import './styles/main.css';
 
 const App = () => {
     const [mileage, setMileage] = useState(0);
 
-    const handleMileageSubmit = (mileageValue) => {
+    const handleMileageSubmit = (mileageValue: number) => {
         setMileage(mileageValue);
     };
 
@@ -17,6 +18,7 @@ const App = () => {
             <MileageForm onSubmit={handleMileageSubmit} />
             <Infographic mileage={mileage} />
             <GlobeVisualization mileage={mileage} />
+            <MoonDistanceVisualization mileage={mileage} />
         </div>
     );
 };
