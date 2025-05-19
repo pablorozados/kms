@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Car Mileage Visualizer
 
 Welcome to the Car Mileage Visualizer project! This web application allows users to input their car's mileage and visualize it in a fun and engaging way. The application calculates how many laps the user has completed around the Earth and the distance to the Moon based on the mileage provided.
@@ -67,3 +68,7 @@ If you'd like to contribute to the project, feel free to submit a pull request o
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
+=======
+# kms
+Quantos kms teu carro tem e o que isso significa.
+>>>>>>> a9cba7afe68d41bf20f3d75eaefaf1caafa42012
